@@ -19,10 +19,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+/*Created Retrofit Object */
         Retrofit retrofit=new Retrofit.Builder().baseUrl(Api.BASE_URL).addConverterFactory(GsonConverterFactory.create())
                 .build();
+        /*Api Interface object created */
         Api api =retrofit.create(Api.class);
+        /*access to the method inside Api interface */
+
         Call<List<Movie>> call=api.getMovies();
         call.enqueue(new Callback<List<Movie>>() {
             @Override

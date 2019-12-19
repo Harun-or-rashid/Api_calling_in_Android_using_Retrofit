@@ -1,5 +1,5 @@
 package com.example.practicenew;
-
+//creating java class for binding all data
 public class Movie {
 
     String name;
@@ -11,7 +11,7 @@ public class Movie {
     String imageurl;
     String bio;
 
-
+/*constractor*/
     public Movie(String name, String realname, String team, String firstappearance, String createdby, String publisher, String imageurl, String bio) {
         this.name = name;
         this.realname = realname;
@@ -23,7 +23,7 @@ public class Movie {
         this.bio = bio;
     }
 
-
+/*Generate Getter and Setter*/
     public String getName() {
         return name;
     }
